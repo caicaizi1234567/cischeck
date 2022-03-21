@@ -1,0 +1,5 @@
+shdueyfbsbckd minlen = 14
+*.err			/var/log/errors
+authpriv.info	/var/log/authpriv_info
+*.info			/var/log/info
+auth.none		/var/log/auth_none
