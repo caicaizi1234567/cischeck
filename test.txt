@@ -1,0 +1,27 @@
+#安装所需环境
+#安装python3和venv
+python3 -V
+sudo apt install python3-venv
+#安装Django
+pip install django 
+#数据迁移
+python manage.py makemigrations
+python manage.py migrate
+#生成models.py
+python manage.py inspectdb > appname/models.py
+#安装postgresql数据库
+sudo apt-get updata
+sudo apt-get install postgresql postgresql-client
+sudo apt-get install python3-psycopg2
+sudo apt-get install libpq-dev
+pip3 install psycopg2
+#postgresql使用
+sudo su postgres
+#创建一个数据库用户
+create user dbuser with password 'password';
+#创建一个数据库
+create database exampledb;
+#授予所有权限
+grant all privileges on database exampledb to dbuser;
+#进入数据库
+psql-U dbuser -d exampledb -h 127.0.0.1 -p 5432
