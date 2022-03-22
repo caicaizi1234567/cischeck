@@ -8,7 +8,7 @@ cur.execute("drop table password")
 cur.execute('create table basemessage(id serial primary key,message varchar(200));')
 cur.execute('create table password(id serial primary key,xiangmu varchar(200),content varchar(200),result varchar(200));')
 
-fd = open("/home/cc/django/ubuntucheck/project_check/basemessage/out.txt")
+fd = open("/basemessage/out.txt")
 #fd1 = open("/home/cc/django/ubuntucheck/project_check/bassmessage/password.txt")
 
 lines = fd.readlines()
@@ -50,7 +50,7 @@ for row in rows:
     print('id=' + str(row[0]) + ' message=' + str(row[1]))
 
 if __name__ == '__main__':
-    fp = '/home/cc/django/ubuntucheck/project_check/basemessage/password.txt'
+    fp = '/basemessage/password.txt'
     lines_agen = read(fp, 3)
     for lines in lines_agen:
         print(lines)
